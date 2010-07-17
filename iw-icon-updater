@@ -6,13 +6,13 @@ icon_dir='/usr/share/iceweasel/chrome/icons/default'
 pixmap_dir='/usr/share/pixmaps'
 
 # get the new icon
-curl -o iw_new.png -O $icon_url
+curl -o iw_new.png -O "$icon_url"
 
 # do the magick
 for size in 16 32 48; do
     convert iw_new.png -resize ${size}x$size iw_${size}.png
-    cp -v $icon_dir/default${size}.png $icon_dir/default${size}.png.orig
-    mv -v iw_${size}.png $icon_dir/default${size}.png 
+    cp -v "$icon_dir/default${size}.png" "$icon_dir/default${size}.png.orig"
+    mv -v "iw_${size}.png" "$icon_dir/default${size}.png"
 done
 
 # one xpm file left
