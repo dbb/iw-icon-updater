@@ -17,8 +17,8 @@ done
 
 # one xpm file left
 convert iw_new.png -resize 32x32 iw_32.xpm
-cp -v $pixmap_dir/iceweasel.xpm $pixmap_dir/iceweasel.png.orig
-mv -v iw_32.xpm $pixmap_dir/iceweasel.xpm
+cp -v "$pixmap_dir/iceweasel.xpm" "$pixmap_dir/iceweasel.png.orig"
+mv -v iw_32.xpm "$pixmap_dir/iceweasel.xpm"
 
 # remove the downloaded file
 rm iw_new.png
