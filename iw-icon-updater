@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # Options
-icon_url='https://wiki.ubuntu.com/IceWeaselIcon?action=AttachFile&do=get&target=IYY_new_tangoish.png'
-icon_url='https://github.com/dbbolton/iw-icon-updater/raw/master/iceweasel_tango_128x128.png'
-doc_icon_url='https://github.com/dbbolton/iw-icon-updater/raw/master/iceweasel_doc_tango_48x48.png'
+
+# This is the original URL, but it is not a perfect 128x128 square
+#icon_url='https://wiki.ubuntu.com/IceWeaselIcon?action=AttachFile&do=get&target=IYY_new_tangoish.png'
+icon_url='https://github.com/dbb/iw-icon-updater/raw/master/iceweasel_tango_128x128.png'
+doc_icon_url='https://github.com/dbb/iw-icon-updater/raw/master/iceweasel_doc_tango_48x48.png'
 prefix='/usr'
 iw_dir="${prefix}/share/iceweasel"
 chrome_dir="${iw_dir}/chrome/icons/default"
