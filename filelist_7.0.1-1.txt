@@ -1,0 +1,15 @@
+/usr/share/iceweasel/chrome/icons/default/default16.png
+/usr/share/iceweasel/chrome/icons/default/default32.png
+/usr/share/iceweasel/chrome/icons/default/default48.png
+/usr/share/iceweasel/icons/document.png
+/usr/share/iceweasel/icons/mozicon128.png
+/usr/share/iceweasel/icons/mozicon16.xpm
+/usr/share/iceweasel/icons/mozicon50.xpm
+/usr/share/icons/hicolor/128x128/apps/iceweasel.png
+/usr/share/icons/hicolor/16x16/apps/iceweasel.png
+/usr/share/icons/hicolor/32x32/apps/iceweasel.png
+/usr/share/icons/hicolor/48x48/apps/iceweasel.png
+/usr/share/icons/hicolor/64x64/apps/iceweasel.png
+/usr/share/icons/hicolor/scalable/apps/iceweasel.svg
+/usr/share/pixmaps/iceweasel.png
+/usr/share/pixmaps/iceweasel.xpm
