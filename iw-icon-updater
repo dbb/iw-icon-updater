@@ -1,20 +1,22 @@
 #!/bin/bash
 
-# Options
+# iw-icon-updater
+# https://github.com/dbb/iw-icon-updater
+# version 0.2 - for Debian Jessie
 
 # This is the original URL, but it is not a perfect 128x128 square
 #icon_url='https://wiki.ubuntu.com/IceWeaselIcon?action=AttachFile&do=get&target=IYY_new_tangoish.png'
 icon_url='https://github.com/dbb/iw-icon-updater/raw/master/iceweasel_tango_128x128.png'
-doc_icon_url='https://github.com/dbb/iw-icon-updater/raw/master/iceweasel_doc_tango_48x48.png'
+# doc_icon_url='https://github.com/dbb/iw-icon-updater/raw/master/iceweasel_doc_tango_48x48.png'
 prefix='/usr'
-iw_dir="${prefix}/share/iceweasel"
+iw_dir="${prefix}/share/iceweasel/browser"
 chrome_dir="${iw_dir}/chrome/icons/default"
 icon_dir="${iw_dir}/icons"
 pixmap_dir="${prefix}/share/pixmaps"
 
 # get the new icon
-curl -o iw_new.png -O "$icon_url"
-curl -o iw_doc.png -O "$doc_icon_url"
+curl -o iw_new.png -L "$icon_url"
+# curl -o iw_doc.png -L "$doc_icon_url"
 
 # chrome dir
 for size in 16 32 48; do
@@ -24,19 +26,19 @@ done
 
 # icon dir
 cp -v ${icon_dir}/mozicon128.png ${icon_dir}/mozicon128.png.orig
-convert iw_new.png -resize 128x128 ${icon_dir}/mozicon128.png
-for size in 16 50; do
-    cp -v ${icon_dir}/mozicon${size}.xpm ${icon_dir}/mozicon${size}.xpm.orig
-    convert iw_new.png -resize ${size}x${size} ${icon_dir}/mozicon${size}.xpm
-done
+cp -v iw_new.png ${icon_dir}/mozicon128.png
+# for size in 16 50; do
+#     cp -v ${icon_dir}/mozicon${size}.xpm ${icon_dir}/mozicon${size}.xpm.orig
+#     convert iw_new.png -resize ${size}x${size} ${icon_dir}/mozicon${size}.xpm
+# done
 
 # one xpm file left
 cp -v ${pixmap_dir}/iceweasel.xpm ${pixmap_dir}/iceweasel.xpm.orig
 convert iw_new.png -resize 32x32 ${pixmap_dir}/iceweasel.xpm
 
 # doc icon
-cp -v ${icon_dir}/document.png ${icon_dir}/document.png.orig
-convert iw_doc.png -resize 48x48 ${icon_dir}/document.png
+# cp -v ${icon_dir}/document.png ${icon_dir}/document.png.orig
+# convert iw_doc.png -resize 48x48 ${icon_dir}/document.png
 
 # remove the downloaded file
 rm iw_new.png iw_doc.png
